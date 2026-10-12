@@ -1,4 +1,4 @@
-# Ensaims — modular build
+# Ensaims
 
 ## 起動
 ES Modules / WebGL / Web Audio を使います。`index.html` を直接開かず、フォルダ内で以下を実行してください。
