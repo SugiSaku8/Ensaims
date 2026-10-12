@@ -1,0 +1,2 @@
+export function makeChart(title='Untitled Chart'){return {format:'ensaims-chart',version:1,meta:{title,artist:'',bpm:120,lanes:10,offsetMs:0},audio:{name:null,dataUrl:null},notes:[]}}
+export function normalizeChart(c){if(!c||c.format!=='ensaims-chart')throw new Error('Ensaims譜面ファイルではありません');c.meta??={title:'Untitled',artist:'',bpm:120,lanes:10,offsetMs:0};c.notes??=[];c.notes=c.notes.filter(n=>Number.isFinite(n.t)&&Number.isFinite(n.lane)&&n.t>=0&&n.lane>=0);return c}
